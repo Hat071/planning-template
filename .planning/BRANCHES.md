@@ -16,8 +16,8 @@ Active branches across all repos. Update when creating, merging, or abandoning b
 
 ## Project Rules
 
-Queried from GitLab API. Re-run check when a cell shows `?` (see instructions in `branches.md`).
+Queried from remote. Re-run check when a cell shows `?` (see instructions in `branches.md`).
 
-| Repo | Default Branch | Push | Merge | Squash | Approvals | Notes |
-|------|---------------|------|-------|--------|-----------|-------|
-| — | — | — | — | — | — | — |
+| Repo | Platform | Default Branch | Push | Merge | Squash | Approvals | Notes |
+|------|----------|---------------|------|-------|--------|-----------|-------|
+| — | — | — | — | — | — | — | — |

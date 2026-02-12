@@ -14,15 +14,16 @@ feature branch → MR (CI + review) → main/master
 
 1. **Create feature branch** from the default branch (or integration branch if applicable)
 2. **Commit and push** to the feature branch
-3. **Create MR** via `glab mr create` (see `branches.md` for squash flags)
-4. **Wait for CI** to pass: `glab ci status`
-5. **Merge via glab**: `glab mr merge <number>` with appropriate flags
+3. **Create MR/PR** — use the right CLI for the platform (see `branches.md` for detection):
+   - GitLab: `glab mr create` | GitHub: `gh pr create`
+4. **Wait for CI** — GitLab: `glab ci status` | GitHub: `gh pr checks`
+5. **Merge** — GitLab: `glab mr merge` | GitHub: `gh pr merge`
 6. **Clean up local**: `git checkout <default> && git pull && git branch -d <branch>`
 
 ### Protected Branches
 
 **All repos have protected default branches — never push directly to main/master.**
-Always merge via MR. See `.planning/BRANCHES.md` for per-repo rules.
+Always merge via MR/PR. See `.planning/BRANCHES.md` for per-repo platform and rules.
 
 ## Commit Timing
 
