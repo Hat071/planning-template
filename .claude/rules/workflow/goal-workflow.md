@@ -1,11 +1,14 @@
 # Goal-Based Workflow
 
+**Core tool:** The `/planning-with-files` skill creates and manages the planning files (`task_plan.md`, `findings.md`, `progress.md`). Always use it when starting or resuming goals.
+
 ## Session Start Checklist
 
 1. Read `@.planning/GOALS.md` to identify active goal
-2. If goal exists, read: `task_plan.md`, `findings.md`, `progress.md`
-3. Check `MILESTONES.md` for roadmap context
-4. Resume work from last session
+2. If goal exists → invoke `/planning-with-files` to resume (it detects existing files)
+3. If no planning files exist yet → invoke `/planning-with-files "Goal #N: Description"` to create them
+4. Check `MILESTONES.md` for roadmap context
+5. Resume work from last session
 
 ## Two-Tier Goal System
 
@@ -31,8 +34,9 @@ project root/                   (ACTIVE goal's files)
 ## Starting a New Goal
 
 1. Update `.planning/GOALS.md` — add to registry, set as "Active Goal"
-2. Invoke `/planning-with-files "Goal #N: Description"`
-3. Creates `task_plan.md`, `findings.md`, `progress.md` in project root
+2. Invoke `/planning-with-files "Goal #N: Description"` — **this is mandatory**
+3. The skill creates `task_plan.md`, `findings.md`, `progress.md` in project root
+4. Work through phases defined in `task_plan.md`, updating `progress.md` and `findings.md` as you go
 
 ## Icing a Goal (pause)
 

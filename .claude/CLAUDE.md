@@ -7,9 +7,13 @@
 3. Check `@.planning/MILESTONES.md` for roadmap context
 4. Resume work from last checkpoint
 
-## Planning Workflow
+## Planning Workflow — `/planning-with-files` Skill
 
-- Use `/planning-with-files` skill for any non-trivial task (>5 tool calls)
+**IMPORTANT:** Always use the `/planning-with-files` skill to manage goal work. This is the core workflow.
+
+- **Starting a goal:** After updating `GOALS.md`, invoke `/planning-with-files "Goal #N: Description"` to create `task_plan.md`, `findings.md`, `progress.md`
+- **Resuming a goal:** If planning files already exist in project root, `/planning-with-files` will detect and resume them
+- **Any non-trivial task** (>5 tool calls) should go through `/planning-with-files`
 - Always read planning files before making changes
 - Update `progress.md` after completing each phase
 - Record discoveries in `findings.md`
