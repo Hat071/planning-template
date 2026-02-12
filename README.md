@@ -20,10 +20,9 @@ Verify it's working by starting a Claude Code session — you should see the ski
 
 ### Disable auto-compacting
 
-> **Strongly recommended:** Disable auto-compact in Claude Code and use `/clear` between goals instead. The planning-with-files skill has a built-in session recovery mechanism — when you start a new session or `/clear`, it reads `task_plan.md`, `findings.md`, and `progress.md` to catch up on context. Auto-compacting loses nuance from your conversation and works against this file-based recovery. Let the planning files be your memory, not the compressed context.
+> **Strongly recommended:** Disable auto-compact in Claude Code and use `/clear` between goals instead. The planning-with-files skill includes a session-catchup script that scans previous session JSONL files to find conversation messages that happened *after* the last planning file update — recovering unsynced context (decisions discussed, commands run, errors hit) that haven't been written to `task_plan.md`, `findings.md`, or `progress.md` yet. Auto-compacting silently discards conversation history that this catchup mechanism relies on. Use `/clear` and let session-catchup bridge the gap.
 
 ```bash
-# In Claude Code settings or ~/.claude/settings.json
 claude config set --global autoCompact false
 ```
 
