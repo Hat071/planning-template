@@ -15,8 +15,9 @@ Thumbs.db
 *.swo
 *~
 
-# Claude Code local settings
+# Claude Code local settings (personal, not shared)
 .claude/settings.local.json
+CLAUDE.local.md
 
 # Active planning files (tracked manually, not auto-committed)
 # Uncomment these if you want to exclude WIP planning from commits:

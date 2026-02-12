@@ -125,3 +125,53 @@ Append-only log in `.planning/TECH_DECISIONS.md`. Never edit past entries — if
 - [ ] `.planning/GOALS.md` — your first goal
 - [ ] `context/` — your domain context documents
 - [ ] `specs/` — your implementation specifications
+
+## Memory Architecture
+
+This template uses Claude Code's [memory hierarchy](https://docs.anthropic.com/en/docs/claude-code/memory) as designed:
+
+| Layer | File | Shared | Purpose in this template |
+|-------|------|--------|--------------------------|
+| Project memory | `.claude/CLAUDE.md` | Team (git) | Session start instructions, context map, `@imports` |
+| Project rules | `.claude/rules/*.md` | Team (git) | Workflow rules, security, git conventions — **grow these as needs emerge** |
+| Local memory | `CLAUDE.local.md` | Just you | Personal project preferences (not committed) |
+| Auto memory | `~/.claude/projects/<project>/memory/` | Just you | Claude's automatic learnings per project |
+
+### Growing your rules
+
+Rules in `.claude/rules/` are loaded automatically every session. Add new rule files as your project evolves:
+
+```
+.claude/rules/
+├── project-overview.md       # Always customize this
+├── security.md               # Security conventions
+└── workflow/
+    ├── goal-workflow.md      # Goal lifecycle
+    ├── branches.md           # Branch tracking
+    ├── documentation.md      # What to update when
+    ├── git.md                # Git conventions
+    ├── changelog.md          # CHANGELOG format
+    ├── local-dev.md          # Dev setup (customize this)
+    └── your-new-rule.md      # Add rules as needs emerge
+```
+
+Rules can be **scoped to specific files** using `paths` frontmatter:
+
+```markdown
+---
+paths:
+  - "src/api/**/*.ts"
+---
+# API rules that only apply when working in src/api/
+```
+
+### Personal preferences with `CLAUDE.local.md`
+
+Create a `CLAUDE.local.md` in the project root for personal preferences that shouldn't be committed (it's gitignored):
+
+```markdown
+# My local preferences
+- I prefer verbose test output
+- My dev server runs on port 3001
+- Use bun instead of npm
+```
