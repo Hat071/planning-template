@@ -4,8 +4,24 @@
 
 1. Read `@.planning/GOALS.md` to identify the **active goal**
 2. If a goal is active, read its planning files: `task_plan.md`, `findings.md`, `progress.md`
-3. Check `@.planning/MILESTONES.md` for roadmap context
-4. Resume work from last checkpoint
+3. Read `@.planning/BRANCHES.md` before any implementation work
+4. Check `@.planning/MILESTONES.md` for roadmap context
+5. Resume work from last checkpoint
+
+## Where to Find Context
+
+Do NOT guess or assume architecture — read the relevant document first.
+
+| When you need... | Read this |
+|------------------|-----------|
+| Project architecture, repos, communication flow | `@.claude/rules/project-overview.md` |
+| Project milestones & roadmap | `@.planning/MILESTONES.md` |
+| Technical decisions and rationale | `@.planning/TECH_DECISIONS.md` |
+| Active goal & goal registry | `@.planning/GOALS.md` |
+| Active branches, base branches, worktrees | `@.planning/BRANCHES.md` |
+| Implementation specs | `specs/` |
+| Context documents | `context/` |
+| Operational runbooks | `runbooks/` |
 
 ## Planning Workflow — `/planning-with-files` Skill
 
@@ -20,20 +36,14 @@
 
 ## Context Integrity
 
-- Update context docs when discovering operational facts
-- Reference context docs — don't duplicate information
+- **Read before writing**: Always read a context/spec file before updating it
+- **Update promptly**: When you discover new operational facts, update the relevant context document in the same session
+- **Reference, don't duplicate**: If information belongs in a context doc, put it there and link to it
+- **findings.md is for the active goal only**: Operational knowledge that outlasts the goal belongs in `context/` docs
 - Specs are source of truth for component design
-- Context docs capture operational reality
 - Tech decisions are append-only (never edit existing entries retroactively)
 
-## Context Map — Where to Read What
+## Working in Related Repos
 
-| Topic | Location |
-|-------|----------|
-| Project architecture overview | `@.claude/rules/project-overview.md` |
-| Project milestones & roadmap | `@.planning/MILESTONES.md` |
-| Technical decisions log | `@.planning/TECH_DECISIONS.md` |
-| Active goal & goal registry | `@.planning/GOALS.md` |
-| Implementation specs | `specs/` |
-| Context documents | `context/` |
-| Operational runbooks | `runbooks/` |
+- When making changes in related repos, log them in `progress.md` with repo, branch, and commit hash
+- Update `@.planning/BRANCHES.md` when creating, merging, or abandoning branches

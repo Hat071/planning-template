@@ -50,6 +50,7 @@ claude config set --global autoCompact false
 │       ├── security.md               # Security rules
 │       └── workflow/                 # Workflow rules
 │           ├── goal-workflow.md      # Goal lifecycle (start, ice, complete)
+│           ├── branches.md          # Branch tracking across repos
 │           ├── documentation.md      # What to update and when
 │           ├── git.md               # Branching, commits, safety
 │           ├── changelog.md         # CHANGELOG convention
@@ -59,6 +60,7 @@ claude config set --global autoCompact false
 │   ├── GOALS.md                     # Goal registry (active, iced, complete)
 │   ├── MILESTONES.md                # Project roadmap
 │   ├── TECH_DECISIONS.md            # Append-only technical decisions log
+│   ├── BRANCHES.md                  # Active branches across all repos
 │   ├── history/                     # Completed goal archives
 │   └── iced/                        # Paused goal archives
 │
