@@ -1,6 +1,6 @@
 # Planning Template
 
-Reusable project template for Claude Code goal-based planning workflow.
+Template for using Claude Code as a planning and implementation engine across target projects. Structured context, goal-driven workflow, growing `.claude/rules`, specs, and technical decisions — all tracked in one place.
 
 ## Prerequisites
 
